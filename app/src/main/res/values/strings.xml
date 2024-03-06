@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PrimeiroProjetoDaniel</string>
+    <string name="botaoEntrar">Entrar</string>
+    <string name="labelLogin">Login</string>
+    <string name="labelSenha">Senha</string>
+    <string name="labelEntrar">Entrar</string>
+    <string name="imgCadastro">Ícone Cadastro Pessoa</string>
+    <string name="hintNome">Nome</string>
+    <string name="hintEndereco">Endereço</string>
+    <string name="hintBairro">Bairro</string>
+    <string name="hintNumero">Número</string>
+</resources>
