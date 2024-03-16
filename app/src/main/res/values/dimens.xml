@@ -2,4 +2,6 @@
 <resources>
     <dimen name="textoHorizontal">300dp</dimen>
     <dimen name="textoVertical">48dp</dimen>
+    <dimen name="LarguraEditText">370dp</dimen>
+    <dimen name="AlturaEditTexto">48dp</dimen>
 </resources>

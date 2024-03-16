@@ -1,5 +1,6 @@
 package com.example.primeiroprojetodaniel;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
         botaoEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                autenticarLogin(usuarioDigitado.getText().toString(), senhadigitada.getText().toString());
+                //Método que irá autenticar o login
+                //autenticarLogin(usuarioDigitado.getText().toString(), senhadigitada.getText().toString());
+                Intent intent = new Intent (getApplicationContext(), CadastroItem.class);
+                startActivity(intent);
             }
         });
     }
