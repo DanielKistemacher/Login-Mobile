@@ -22,6 +22,7 @@ public class CadastroItem extends AppCompatActivity implements View.OnClickListe
     private Button buttonConsultarItens = null;
 
     private SQLiteDatabase bancoDados = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class CadastroItem extends AppCompatActivity implements View.OnClickListe
         editTextQuantidadeItem =  (EditText) findViewById(R.id.editTextQuantidadeItem);
         buttonSalvarItem =  (Button) findViewById(R.id.buttonSalvarItem);
         buttonSalvarItem.setOnClickListener(this);
-        buttonConsultarItens = (Button) findViewById(R.id.buttonConsultarItens);
+        buttonConsultarItens = (Button) findViewById(R.id.buttonVoltarMenu);
         buttonConsultarItens.setOnClickListener(this);
     }
 
@@ -45,23 +46,30 @@ public class CadastroItem extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view.getId() == R.id.buttonSalvarItem){
 
-            ContentValues values = new ContentValues();
-            values.put("descricao", editTextNomeItem.getText().toString());
-            values.put("quantidade", editTextQuantidadeItem.getText().toString());
+            String nome = editTextNomeItem.getText().toString();
+            String quantidade = editTextQuantidadeItem.getText().toString();
 
-            long pos = bancoDados.insert("item", null, values);
-            Toast.makeText(this, "Item " + editTextNomeItem.getText().toString() + " cadastrado! Item:" + pos, Toast.LENGTH_SHORT).show();
+            if (nome.equals("") || quantidade.equals("")){
+                Toast.makeText(this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
+            } else {
+                ContentValues values = new ContentValues();
+                values.put("descricao", editTextNomeItem.getText().toString());
+                values.put("quantidade", editTextQuantidadeItem.getText().toString());
 
-            //Atividade 03
-            if (pos%10 == 0) {
-                Toast.makeText(this, "A quantidade de itens inseridos é múltiplo de 10", Toast.LENGTH_LONG).show();
+                long pos = bancoDados.insert("item", null, values);
+                Toast.makeText(this, "Item " + editTextNomeItem.getText().toString() + " cadastrado! Item:" + pos, Toast.LENGTH_SHORT).show();
+
+                //Atividade 03
+                if (pos%10 == 0) {
+                    Toast.makeText(this, "A quantidade de itens inseridos é múltiplo de 10", Toast.LENGTH_LONG).show();
+                }
+
+                editTextNomeItem.setText("");
+                editTextQuantidadeItem.setText("");
+                editTextNomeItem.requestFocus();
             }
-
-            editTextNomeItem.setText("");
-            editTextQuantidadeItem.setText("");
-
-        } else if (view.getId() == R.id.buttonConsultarItens) {
-            Intent intent = new Intent(getApplicationContext(), ListaItens.class);
+        } else if (view.getId() == R.id.buttonVoltarMenu) {
+            Intent intent = new Intent(getApplicationContext(), MenuOpcoes.class);
             startActivity(intent);
         }
     }

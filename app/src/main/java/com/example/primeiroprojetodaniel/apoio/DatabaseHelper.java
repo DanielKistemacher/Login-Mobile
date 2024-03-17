@@ -35,4 +35,9 @@ public class DatabaseHelper {
         cursor.close();
         return itemList;
     }
+
+    public void deletaItem(int id){
+        database.execSQL("DELETE FROM item WHERE id=" + id);
+        database.close();
+    }
 }
