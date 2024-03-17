@@ -1,16 +1,24 @@
-package com.example.primeiroprojetodaniel;
+package com.example.primeiroprojetodaniel.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.primeiroprojetodaniel.R;
+import com.example.primeiroprojetodaniel.apoio.DataBaseManager;
 
 public class MenuOpcoes extends AppCompatActivity implements View.OnClickListener {
 
     private Button buttonMenuCadastrarItem = null;
     private Button buttonMenuListarItens = null;
+    private SQLiteDatabase bancoDeDados = null;
+    private DataBaseManager dataBaseManager = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,4 +1,4 @@
-package com.example.primeiroprojetodaniel;
+package com.example.primeiroprojetodaniel.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,9 +12,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import java.text.SimpleDateFormat;
+import com.example.primeiroprojetodaniel.R;
+
 import java.util.Calendar;
-import java.util.Locale;
 
 public class CadastroPessoa extends AppCompatActivity {
 

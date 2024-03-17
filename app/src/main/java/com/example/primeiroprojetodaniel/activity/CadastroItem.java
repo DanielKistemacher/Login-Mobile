@@ -1,4 +1,4 @@
-package com.example.primeiroprojetodaniel;
+package com.example.primeiroprojetodaniel.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.primeiroprojetodaniel.R;
+import com.example.primeiroprojetodaniel.apoio.DataBaseManager;
 
 public class CadastroItem extends AppCompatActivity implements View.OnClickListener {
 

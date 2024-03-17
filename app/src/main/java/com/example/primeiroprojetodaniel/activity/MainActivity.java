@@ -1,6 +1,5 @@
-package com.example.primeiroprojetodaniel;
+package com.example.primeiroprojetodaniel.activity;
 
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -13,6 +12,7 @@ import android.widget.EditText;
 import android.content.Context;
 import android.widget.Toast;
 
+import com.example.primeiroprojetodaniel.R;
 
 
 public class MainActivity extends AppCompatActivity {

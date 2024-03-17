@@ -13,19 +13,19 @@
         android:theme="@style/Theme.PrimeiroProjetoDaniel"
         tools:targetApi="31">
         <activity
-            android:name=".MenuOpcoes"
+            android:name=".activity.ListaItens"
             android:exported="false" />
         <activity
-            android:name=".ListaItens"
+            android:name=".activity.MenuOpcoes"
             android:exported="false" />
         <activity
-            android:name=".CadastroItem"
+            android:name=".activity.CadastroItem"
             android:exported="false" />
         <activity
-            android:name=".CadastroPessoa"
+            android:name=".activity.CadastroPessoa"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
