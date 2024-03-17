@@ -4,4 +4,8 @@
     <dimen name="textoVertical">48dp</dimen>
     <dimen name="LarguraEditText">370dp</dimen>
     <dimen name="AlturaEditTexto">48dp</dimen>
+    <dimen name="BotoesWidth">130dp</dimen>
+    <dimen name="BotoesHeight">70dp</dimen>
+    <dimen name="BotoesMenuWidth">135dp</dimen>
+    <dimen name="BotoesMenuHeight">105dp</dimen>
 </resources>

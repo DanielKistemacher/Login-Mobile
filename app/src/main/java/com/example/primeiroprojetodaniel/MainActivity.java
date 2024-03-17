@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Método que irá autenticar o login
                 //autenticarLogin(usuarioDigitado.getText().toString(), senhadigitada.getText().toString());
-                Intent intent = new Intent (getApplicationContext(), CadastroItem.class);
+                Intent intent = new Intent (getApplicationContext(), MenuOpcoes.class);
                 startActivity(intent);
             }
         });
