@@ -38,8 +38,6 @@ public class DatabaseHelper {
 
     public void deletaItem(int id){
         this.database.delete(TABLE_ITEM, COLUMN_ID + "= ?", new String[]{String.valueOf(id)});
-        //System.out.println("TESTES id: "+ id);
-        //database.rawQuery("DELETE FROM item WHERE id=" + id, null);
         this.database.close();
     }
 }
