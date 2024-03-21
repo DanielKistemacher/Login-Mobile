@@ -50,7 +50,9 @@ public class ListaItens extends AppCompatActivity {
             @Override
             public void onDeleteClick(int position, Item item) {
                 new DatabaseHelper(ListaItens.this).deletaItem(item.getId());
-                itemAdapter.notifyDataSetChanged();
+                //itemAdapter.notifyDataSetChanged();
+                finish();
+                startActivity(getIntent());
             }
         });
     }
