@@ -43,7 +43,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ItemViewHolder
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
         final Item currentItem = itemList.get(position);
-        holder.textView.setText(currentItem.getNomeItem() + "(" + currentItem.getQuantidadeItem() + ")");
+        holder.textView.setText(currentItem.getNomeItem() + " | Qtd: " + currentItem.getQuantidadeItem());
     }
 
     @Override
