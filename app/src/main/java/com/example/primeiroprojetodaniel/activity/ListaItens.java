@@ -1,12 +1,11 @@
 package com.example.primeiroprojetodaniel.activity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.primeiroprojetodaniel.R;
 import com.example.primeiroprojetodaniel.adapter.ItemAdapter;
 import com.example.primeiroprojetodaniel.apoio.DatabaseHelper;
@@ -37,13 +36,14 @@ public class ListaItens extends AppCompatActivity {
             @Override
             public void onEditClick(int position, Item itemAntigo) {
                 // abrir tela
-                // preencher com o item, todos os campos da tela
-                // Item novoItem = itemDaTela;
+                Bundle bundle = new Bundle();
+                bundle.putString("id", itemAntigo.getId().toString());
+                bundle.putString("nome", itemAntigo.getNomeItem());
+                bundle.putString("quantidade", itemAntigo.getQuantidadeItem().toString());
 
-//                new DatabaseHelper(ListaItens.this).editaItem(item);
-                itemAdapter.notifyDataSetChanged();
-
-                // LINK PARA EDITAR: https://chat.openai.com/share/2129cd0d-7319-47ca-86b2-72435442dea0
+                Intent intent = new Intent(ListaItens.this, EditarItem.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
 
             @SuppressLint("NotifyDataSetChanged")
